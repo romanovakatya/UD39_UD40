@@ -1,1 +1,39 @@
-<p>{{character | json}}</p>
+<div class="container mt-4">
+  <button routerLink="/characters" class="btn btn-success">Back</button>
+  <div class="card m-auto" style="width: 20rem;" *ngIf="character!=null; else espera">
+    <img src="{{character.image}}" class="card-img-top" alt="character">
+    <div class="card-body">
+    <table class="table">
+      <tbody>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[0] | idiomas}} </th>
+        <td class="text-start">{{character.id  }}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[1] | idiomas:'castellano'}}</th>
+        <td class="text-start">{{character.name | uppercase}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[2] | idiomas:'catalan'}}</th>
+        <td class="text-start">{{character.status | lowercase}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[3] | idiomas}}</th>
+        <td class="text-start">{{character.species}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[4] | idiomas:'castellano'}}</th>
+        <td class="text-start">{{character.gender}}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="text-end">{{arrayTh[1] | idiomas:'catalan'}}</th>
+        <td class="text-start">{{character.type}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <ng-template #espera> Esperando datos...</ng-template>
+</div>
+
+

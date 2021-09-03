@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import { DetallesComponent } from './detalles/detalles.component';
 import {FormsModule} from "@angular/forms";
+import { IdiomasPipe } from './idiomas.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from "@angular/forms";
     AboutComponent,
     CharactersComponent,
     HomeComponent,
-    DetallesComponent
+    DetallesComponent,
+    IdiomasPipe
   ],
   imports: [
     BrowserModule,

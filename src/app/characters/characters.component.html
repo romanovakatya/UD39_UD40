@@ -6,10 +6,9 @@
         <div class="card-body">
           <p class="card-text">{{character.name}}</p>
 
-           <a (click) = saveId(character.id) routerLink="/characters/{{id}}"
+           <a routerLink="/characters/{{character.id}}"
               class="btn btn-warning btn-sm pe-5 ps-5">See more
            </a>
-<p> {{id}}</p>
         </div>
       </div>
     </div>

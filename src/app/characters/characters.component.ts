@@ -9,7 +9,6 @@ import {CharactersService} from "../characters.service";
 export class CharactersComponent implements OnInit {
 
   characters: any = null;
-  id: number = 0;
 
   constructor(private charactersService: CharactersService) {
   }
@@ -26,10 +25,5 @@ export class CharactersComponent implements OnInit {
           console.log('problems');
         }
       )
-  }
-
-  saveId(id: number){
-    this.id = id;
-    console.log("de de saveId: " +  this.id);
   }
 }
